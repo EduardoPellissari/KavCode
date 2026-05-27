@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KavCode cria sites institucionais, portfólios profissionais e sistemas sob medida com estratégia, código limpo e design responsivo."
+    />
+    <title>KavCode | Desenvolvimento web e sistemas sob medida</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="KavCode">
+        <img src="assets/kavcode-logo.png" alt="" />
+        <span>KavCode</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="header-cta" href="#contato">Iniciar projeto</a>
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-content">
+          <p class="eyebrow">Desenvolvimento web • Sites • Sistemas</p>
+          <h1>KavCode</h1>
+          <p class="hero-copy">
+            Sites institucionais e soluções digitais sob medida para negócios que precisam
+            parecer profissionais, vender melhor e operar com mais eficiência.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#portfolio">Ver portfólio</a>
+            <a class="secondary-button" href="#servicos">Conhecer serviços</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="assets/kavcode-logo.png" alt="" />
+          <div class="code-window">
+            <div class="window-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>const projeto = {
+  estrategia: "clara",
+  interface: "responsiva",
+  codigo: "limpo",
+  entrega: "sob medida"
+};</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-band" aria-label="Principais entregas">
+        <div>
+          <strong>Sites rápidos</strong>
+          <span>Institucionais, landing pages e páginas de campanha.</span>
+        </div>
+        <div>
+          <strong>Sistemas úteis</strong>
+          <span>Painéis, cadastros, fluxos internos e integrações.</span>
+        </div>
+        <div>
+          <strong>Marca aplicada</strong>
+          <span>Visual consistente com identidade, tom e posicionamento.</span>
+        </div>
+      </section>
+
+      <section class="section" id="servicos">
+        <div class="section-heading">
+          <p class="eyebrow">O que a KavCode entrega</p>
+          <h2>Presença digital com estrutura de produto.</h2>
+          <p>
+            Cada página é pensada para comunicar valor, carregar rápido e facilitar o
+            próximo passo do cliente.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <span>01</span>
+            <h3>Site institucional</h3>
+            <p>Home, páginas comerciais, apresentação da empresa, diferenciais e contato em uma experiência clara.</p>
+          </article>
+          <article class="service-card">
+            <span>02</span>
+            <h3>Portfólio profissional</h3>
+            <p>Vitrine de projetos com filtros, estudos de caso e estrutura para mostrar resultados com autoridade.</p>
+          </article>
+          <article class="service-card">
+            <span>03</span>
+            <h3>Sistemas sob medida</h3>
+            <p>Ferramentas internas, painéis administrativos, áreas restritas e recursos feitos para a rotina do negócio.</p>
+          </article>
+          <article class="service-card">
+            <span>04</span>
+            <h3>Manutenção evolutiva</h3>
+            <p>Ajustes, melhorias contínuas, novas páginas e suporte para manter o projeto pronto para crescer.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="showcase" id="portfolio">
+        <div class="section-heading">
+          <p class="eyebrow">Portfólio</p>
+          <h2>Projetos com foco em presença, operação e conversão.</h2>
+        </div>
+        <div class="portfolio-toolbar" aria-label="Filtros do portfólio">
+          <button class="filter-button active" type="button" data-filter="todos">Todos</button>
+          <button class="filter-button" type="button" data-filter="sites">Sites</button>
+          <button class="filter-button" type="button" data-filter="sistemas">Sistemas</button>
+        </div>
+        <div class="portfolio-grid">
+          <article class="project-card" data-category="sites">
+            <div class="project-preview preview-site">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <p>Site institucional</p>
+              <h3>Presença digital para empresa de serviços</h3>
+              <span>Estrutura comercial, SEO base e formulário de contato.</span>
+            </div>
+          </article>
+          <article class="project-card" data-category="sistemas">
+            <div class="project-preview preview-system">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <p>Sistema web</p>
+              <h3>Painel de gestão para rotina operacional</h3>
+              <span>Cadastros, status, indicadores e área administrativa.</span>
+            </div>
+          </article>
+          <article class="project-card" data-category="sites">
+            <div class="project-preview preview-flow">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <p>Portfólio</p>
+              <h3>Vitrine de projetos para profissional criativo</h3>
+              <span>Apresentação de trabalhos, serviços, depoimentos e chamada para orçamento.</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="processo">
+        <div class="section-heading">
+          <p class="eyebrow">Como funciona</p>
+          <h2>Do briefing ao lançamento sem enrolação.</h2>
+        </div>
+        <div class="process-list">
+          <article>
+            <span>01</span>
+            <h3>Diagnóstico</h3>
+            <p>Entendimento do negócio, público, objetivos e materiais da marca.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Arquitetura</h3>
+            <p>Definição das páginas, conteúdos, jornada de contato e prioridades.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Design e código</h3>
+            <p>Criação da interface responsiva com componentes reaproveitáveis.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Publicação</h3>
+            <p>Testes finais, ajustes finos, configuração e entrega pronta para uso.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contato">
+        <div>
+          <p class="eyebrow">Vamos construir</p>
+          <h2>Seu próximo site pode nascer com cara de marca grande.</h2>
+          <p>
+            Conte o que você quer vender, apresentar ou organizar. A KavCode transforma
+            a ideia em uma presença digital objetiva e bem acabada.
+          </p>
+        </div>
+        <form class="contact-form">
+          <label>
+            Nome
+            <input type="text" name="nome" placeholder="Seu nome" />
+          </label>
+          <label>
+            WhatsApp ou e-mail
+            <input type="text" name="contato" placeholder="Como podemos falar com você?" />
+          </label>
+          <label>
+            Projeto
+            <textarea name="projeto" rows="4" placeholder="Me conte o que precisa"></textarea>
+          </label>
+          <button class="primary-button" type="submit">Enviar briefing</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#inicio" aria-label="KavCode">
+        <img src="assets/kavcode-logo.png" alt="" />
+        <span>KavCode</span>
+      </a>
+      <p>Sites institucionais, portfólios e sistemas sob medida.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
