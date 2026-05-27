@@ -3,6 +3,9 @@ const menuButton = document.querySelector("[data-menu-button]");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const projectCards = document.querySelectorAll("[data-category]");
 const contactForm = document.querySelector(".contact-form");
+const revealItems = document.querySelectorAll(
+  ".trust-band div, .section-heading, .service-card, .project-card, .process-list article, .contact-section > div, .contact-form, .site-footer"
+);
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 10);
@@ -44,3 +47,23 @@ contactForm.addEventListener("submit", (event) => {
     button.textContent = "Enviar briefing";
   }, 2400);
 });
+
+if ("IntersectionObserver" in window) {
+  revealItems.forEach((item) => item.classList.add("reveal"));
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+}
