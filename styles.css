@@ -646,6 +646,7 @@ h3 {
 @media (max-width: 680px) {
   .site-header {
     height: 68px;
+    padding: 0 18px;
   }
 
   .brand img {
@@ -655,38 +656,153 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-top: 112px;
+    gap: 28px;
+    padding: 104px 18px 50px;
   }
 
   h1 {
-    font-size: clamp(3.8rem, 18vw, 5.5rem);
+    font-size: clamp(3.2rem, 16vw, 4.8rem);
+    line-height: 0.92;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.06;
+  }
+
+  h3 {
+    font-size: 1.16rem;
+    line-height: 1.25;
+  }
+
+  .eyebrow {
+    margin-bottom: 12px;
+    font-size: 0.72rem;
+    line-height: 1.45;
+  }
+
+  .hero-copy,
+  .section-heading p:not(.eyebrow),
+  .contact-section p {
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .hero-copy {
+    margin-top: 20px;
+  }
+
+  .hero-actions {
+    display: grid;
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 16px;
   }
 
   .hero-visual {
-    min-height: 360px;
+    min-height: auto;
+  }
+
+  .hero-visual > img {
+    width: min(74vw, 280px);
+    filter: drop-shadow(0 22px 42px rgba(5, 29, 59, 0.14));
   }
 
   .code-window {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    width: 100%;
-    margin-top: -48px;
+    display: none;
+  }
+
+  .trust-band div {
+    padding: 22px 18px;
   }
 
   .section,
   .showcase,
   .contact-section {
-    padding-top: 76px;
-    padding-bottom: 76px;
+    padding: 66px 18px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .services-grid,
+  .portfolio-grid,
+  .process-list {
+    gap: 14px;
+  }
+
+  .service-card,
+  .process-list article {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .service-card span,
+  .process-list span {
+    margin-bottom: 22px;
+  }
+
+  .portfolio-toolbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .filter-button {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 10px;
+  }
+
+  .project-preview {
+    min-height: 160px;
+    padding: 18px;
+  }
+
+  .project-card > div:last-child {
+    padding: 20px;
   }
 
   .process-list {
     grid-template-columns: 1fr;
   }
 
+  .contact-form {
+    padding: 20px;
+  }
+
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+    padding: 28px 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header {
+    padding: 0 14px;
+  }
+
+  .brand span {
+    font-size: 0.95rem;
+  }
+
+  .hero,
+  .section,
+  .showcase,
+  .contact-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  h1 {
+    font-size: clamp(2.9rem, 15vw, 3.6rem);
   }
 }
