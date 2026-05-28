@@ -171,6 +171,7 @@ textarea {
 }
 
 .hero {
+  position: relative;
   min-height: 94vh;
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
@@ -178,9 +179,15 @@ textarea {
   gap: clamp(36px, 6vw, 88px);
   padding: 132px clamp(20px, 5vw, 72px) 64px;
   overflow: hidden;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.84) 48%, rgba(255, 255, 255, 0.88) 100%), url("assets/hero-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 690px;
   animation: slideFadeUp 900ms ease both;
 }
@@ -210,6 +217,19 @@ h1 {
   letter-spacing: 0;
   overflow-wrap: normal;
   word-break: keep-all;
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+}
+
+.hero-title img {
+  width: clamp(54px, 8vw, 108px);
+  height: clamp(54px, 8vw, 108px);
+  flex: 0 0 auto;
+  object-fit: contain;
 }
 
 h2 {
@@ -245,6 +265,7 @@ h3 {
 
 .hero-visual {
   position: relative;
+  z-index: 1;
   min-height: 500px;
   display: grid;
   place-items: center;
@@ -767,11 +788,22 @@ h3 {
     min-height: auto;
     gap: 28px;
     padding: 104px 18px 50px;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 100%), url("assets/hero-background.png");
+    background-position: center top;
   }
 
   h1 {
     font-size: clamp(3.2rem, 16vw, 4.8rem);
     line-height: 0.92;
+  }
+
+  .hero-title {
+    gap: 10px;
+  }
+
+  .hero-title img {
+    width: clamp(42px, 13vw, 58px);
+    height: clamp(42px, 13vw, 58px);
   }
 
   h2 {
@@ -941,5 +973,10 @@ h3 {
 
   h1 {
     font-size: clamp(2.9rem, 15vw, 3.6rem);
+  }
+
+  .hero-title img {
+    width: 38px;
+    height: 38px;
   }
 }
