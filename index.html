@@ -8,7 +8,7 @@
       content="KavCode cria sites institucionais, portfólios profissionais e sistemas sob medida com estratégia, código limpo e design responsivo."
     />
     <title>KavCode | Desenvolvimento web e sistemas sob medida</title>
-    <link rel="stylesheet" href="styles.css?v=9" />
+    <link rel="stylesheet" href="styles.css?v=10" />
   </head>
   <body>
     <header class="site-header" data-header>
@@ -118,44 +118,82 @@
         </div>
         <div class="portfolio-toolbar" aria-label="Filtros do portfólio">
           <button class="filter-button active" type="button" data-filter="todos">Todos</button>
-          <button class="filter-button" type="button" data-filter="sites">Sites</button>
           <button class="filter-button" type="button" data-filter="sistemas">Sistemas</button>
         </div>
         <div class="portfolio-grid">
-          <article class="project-card" data-category="sites">
-            <div class="project-preview preview-site">
-              <span></span>
-              <span></span>
-              <span></span>
+          <article class="project-card project-case" data-category="sistemas">
+            <div class="project-preview project-screenshot">
+              <img src="assets/portfolio/quintal/login.png" alt="Tela de login do sistema Quintal do Zé" />
             </div>
-            <div>
-              <p>Site institucional</p>
-              <h3>Presença digital para empresa de serviços</h3>
-              <span>Estrutura comercial, SEO base e formulário de contato.</span>
+            <div class="project-body">
+              <p>Sistema de pedidos</p>
+              <h3>Quintal do Zé | Pedidos Personalizados</h3>
+              <span>Fluxo completo com login, administração, caixa, relatórios, pedidos e painel da cozinha.</span>
+              <div class="project-tags" aria-label="Recursos do sistema">
+                <strong>Login</strong>
+                <strong>Administração</strong>
+                <strong>Caixa</strong>
+                <strong>Cozinha</strong>
+              </div>
+              <div class="project-thumbs" aria-label="Telas do sistema Quintal do Zé">
+                <button class="active" type="button" data-preview="assets/portfolio/quintal/login.png" aria-label="Ver tela de login">
+                  <img src="assets/portfolio/quintal/login.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/quintal/admin.png" aria-label="Ver painel administrativo">
+                  <img src="assets/portfolio/quintal/admin.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/quintal/produtos.png" aria-label="Ver tela de produtos">
+                  <img src="assets/portfolio/quintal/produtos.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/quintal/caixa.png" aria-label="Ver tela de caixa">
+                  <img src="assets/portfolio/quintal/caixa.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/quintal/relatorios.png" aria-label="Ver tela de relatórios">
+                  <img src="assets/portfolio/quintal/relatorios.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/quintal/pedidos.png" aria-label="Ver tela de pedidos">
+                  <img src="assets/portfolio/quintal/pedidos.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/quintal/cozinha.png" aria-label="Ver painel da cozinha">
+                  <img src="assets/portfolio/quintal/cozinha.png" alt="" />
+                </button>
+              </div>
             </div>
           </article>
-          <article class="project-card" data-category="sistemas">
-            <div class="project-preview preview-system">
-              <span></span>
-              <span></span>
-              <span></span>
+          <article class="project-card project-case" data-category="sistemas">
+            <div class="project-preview project-screenshot">
+              <img src="assets/portfolio/estoque/dashboard.png" alt="Dashboard do sistema Gestão de Estoque" />
             </div>
-            <div>
+            <div class="project-body">
               <p>Sistema web</p>
-              <h3>Painel de gestão para rotina operacional</h3>
-              <span>Cadastros, status, indicadores e área administrativa.</span>
-            </div>
-          </article>
-          <article class="project-card" data-category="sites">
-            <div class="project-preview preview-flow">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div>
-              <p>Portfólio</p>
-              <h3>Vitrine de projetos para profissional criativo</h3>
-              <span>Apresentação de trabalhos, serviços, depoimentos e chamada para orçamento.</span>
+              <h3>Gestão de Estoque</h3>
+              <span>Sistema com acesso, dashboard, movimentação de estoque, catálogo, relatórios e perfil.</span>
+              <div class="project-tags" aria-label="Recursos do sistema">
+                <strong>Dashboard</strong>
+                <strong>Estoque</strong>
+                <strong>Catálogo</strong>
+                <strong>Relatórios</strong>
+              </div>
+              <div class="project-thumbs" aria-label="Telas do sistema Gestão de Estoque">
+                <button class="active" type="button" data-preview="assets/portfolio/estoque/dashboard.png" aria-label="Ver dashboard">
+                  <img src="assets/portfolio/estoque/dashboard.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/estoque/login.png" aria-label="Ver tela de acesso">
+                  <img src="assets/portfolio/estoque/login.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/estoque/estoque.png" aria-label="Ver movimentação de estoque">
+                  <img src="assets/portfolio/estoque/estoque.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/estoque/catalogo.png" aria-label="Ver catálogo">
+                  <img src="assets/portfolio/estoque/catalogo.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/estoque/relatorios.png" aria-label="Ver relatórios">
+                  <img src="assets/portfolio/estoque/relatorios.png" alt="" />
+                </button>
+                <button type="button" data-preview="assets/portfolio/estoque/perfil.png" aria-label="Ver perfil">
+                  <img src="assets/portfolio/estoque/perfil.png" alt="" />
+                </button>
+              </div>
             </div>
           </article>
         </div>
@@ -225,6 +263,6 @@
       <p>Sites institucionais, portfólios e sistemas sob medida.</p>
     </footer>
 
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
   </body>
 </html>
