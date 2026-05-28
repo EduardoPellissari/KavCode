@@ -446,8 +446,8 @@ h3 {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .project-card {
@@ -462,8 +462,8 @@ h3 {
   box-shadow: 0 30px 64px rgba(0, 0, 0, 0.26);
 }
 
-.project-card:hover .project-preview span {
-  transform: translateY(-3px);
+.project-card:hover .project-screenshot img {
+  transform: scale(1.025);
 }
 
 .project-card.hidden {
@@ -472,6 +472,11 @@ h3 {
 
 .project-card > div:last-child {
   padding: 24px;
+}
+
+.project-body {
+  display: grid;
+  gap: 14px;
 }
 
 .project-card p {
@@ -489,16 +494,84 @@ h3 {
 
 .project-card span {
   display: block;
-  margin-top: 12px;
+  margin-top: 0;
   color: #b7c5d8;
 }
 
 .project-preview {
-  min-height: 230px;
+  min-height: 260px;
   display: grid;
   gap: 12px;
   padding: 24px;
   background: #eef7fb;
+}
+
+.project-screenshot {
+  aspect-ratio: 16 / 9;
+  min-height: auto;
+  overflow: hidden;
+  padding: 0;
+  background: #06162d;
+}
+
+.project-screenshot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top left;
+  transition: transform 260ms ease, opacity 180ms ease;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags strong {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(110, 231, 225, 0.2);
+  border-radius: 999px;
+  color: var(--cyan-2);
+  background: rgba(31, 199, 193, 0.08);
+  font-size: 0.74rem;
+}
+
+.project-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.project-thumbs button {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.project-thumbs button:hover,
+.project-thumbs button.active {
+  transform: translateY(-2px);
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(31, 199, 193, 0.12);
+}
+
+.project-thumbs img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top left;
 }
 
 .project-preview span {
@@ -915,8 +988,17 @@ h3 {
     padding: 18px;
   }
 
+  .project-screenshot {
+    min-height: auto;
+    padding: 0;
+  }
+
   .project-card > div:last-child {
     padding: 20px;
+  }
+
+  .project-thumbs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .process-list {
