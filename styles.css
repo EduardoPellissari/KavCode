@@ -226,8 +226,8 @@ h1 {
 }
 
 .hero-title img {
-  width: clamp(54px, 8vw, 108px);
-  height: clamp(54px, 8vw, 108px);
+  width: auto;
+  height: clamp(58px, 0.68em, 96px);
   flex: 0 0 auto;
   object-fit: contain;
 }
@@ -802,8 +802,8 @@ h3 {
   }
 
   .hero-title img {
-    width: clamp(42px, 13vw, 58px);
-    height: clamp(42px, 13vw, 58px);
+    width: auto;
+    height: clamp(42px, 0.7em, 54px);
   }
 
   h2 {
@@ -976,7 +976,7 @@ h3 {
   }
 
   .hero-title img {
-    width: 38px;
+    width: auto;
     height: 38px;
   }
 }
