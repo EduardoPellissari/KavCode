@@ -2,6 +2,7 @@ const header = document.querySelector("[data-header]");
 const menuButton = document.querySelector("[data-menu-button]");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const projectCards = document.querySelectorAll("[data-category]");
+const previewButtons = document.querySelectorAll("[data-preview]");
 const contactForm = document.querySelector(".contact-form");
 const revealItems = document.querySelectorAll(
   ".trust-band div, .section-heading, .service-card, .project-card, .process-list article, .contact-section > div, .contact-form, .site-footer"
@@ -36,6 +37,22 @@ filterButtons.forEach((button) => {
     projectCards.forEach((card) => {
       card.classList.toggle("hidden", filter !== "todos" && card.dataset.category !== filter);
     });
+  });
+});
+
+previewButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".project-card");
+    const previewImage = card.querySelector(".project-screenshot img");
+
+    card.querySelectorAll("[data-preview]").forEach((item) => item.classList.remove("active"));
+    button.classList.add("active");
+    previewImage.style.opacity = "0";
+
+    setTimeout(() => {
+      previewImage.src = button.dataset.preview;
+      previewImage.style.opacity = "1";
+    }, 120);
   });
 });
 
