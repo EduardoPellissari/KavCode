@@ -58,11 +58,23 @@ previewButtons.forEach((button) => {
 
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
+  const formData = new FormData(contactForm);
+  const nome = formData.get("nome").trim();
+  const contato = formData.get("contato").trim();
+  const projeto = formData.get("projeto").trim();
   const button = contactForm.querySelector("button");
-  button.textContent = "Briefing recebido";
-  setTimeout(() => {
-    button.textContent = "Enviar briefing";
-  }, 2400);
+
+  const message = [
+    "Olá, vim pelo site da KavCode e quero iniciar um projeto.",
+    "",
+    `Nome: ${nome}`,
+    `Contato: ${contato}`,
+    `Projeto: ${projeto}`,
+  ].join("\n");
+
+  const whatsappUrl = `https://wa.me/5547991457978?text=${encodeURIComponent(message)}`;
+  button.textContent = "Abrindo WhatsApp";
+  window.location.href = whatsappUrl;
 });
 
 if ("IntersectionObserver" in window) {
