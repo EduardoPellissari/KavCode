@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="KavCode cria sites institucionais, portfólios profissionais e sistemas sob medida com estratégia, código limpo e design responsivo."
+      content="KavCode desenvolve sites institucionais, portfólios profissionais e sistemas sob medida para negócios que querem vender melhor e organizar sua operação."
     />
+    <meta name="theme-color" content="#051d3b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="KavCode | Sites e sistemas sob medida" />
+    <meta
+      property="og:description"
+      content="Desenvolvimento web, portfólios e sistemas com interface clara, código limpo e foco na rotina do negócio."
+    />
+    <meta property="og:image" content="assets/hero-background.png" />
+    <meta property="og:locale" content="pt_BR" />
     <title>KavCode | Desenvolvimento web e sistemas sob medida</title>
-    <link rel="stylesheet" href="styles.css?v=23" />
+    <link rel="stylesheet" href="styles.css?v=24" />
   </head>
   <body>
     <header class="site-header" data-header>
@@ -20,6 +29,7 @@
         <a href="#servicos">Serviços</a>
         <a href="#portfolio">Portfólio</a>
         <a href="#processo">Processo</a>
+        <a href="#sac">SAC</a>
         <a href="#contato">Contato</a>
       </nav>
       <div class="header-actions">
@@ -96,6 +106,24 @@
         </div>
       </section>
 
+      <section class="section about-section" id="sobre">
+        <div class="about-copy">
+          <p class="eyebrow">Sobre a KavCode</p>
+          <h2>Construção digital com olhar de negócio.</h2>
+          <p>
+            A KavCode nasceu para criar sites e sistemas que não ficam só bonitos na tela. Cada projeto é pensado para comunicar melhor, organizar processos e facilitar o próximo passo do cliente.
+          </p>
+        </div>
+        <div class="about-panel">
+          <span>Jeito de trabalhar</span>
+          <ul>
+            <li>Briefing claro antes de começar.</li>
+            <li>Interface responsiva para desktop e celular.</li>
+            <li>Código limpo, publicação e ajustes finais.</li>
+          </ul>
+        </div>
+      </section>
+
       <section class="section" id="servicos">
         <div class="section-heading">
           <p class="eyebrow">O que a KavCode entrega</p>
@@ -156,6 +184,27 @@
         </div>
       </section>
 
+      <section class="results-section" aria-label="Resultados práticos dos projetos">
+        <div>
+          <p class="eyebrow">Na prática</p>
+          <h2>O projeto precisa funcionar para quem usa e para quem vende.</h2>
+        </div>
+        <div class="results-grid">
+          <article class="result-card">
+            <strong>Clareza</strong>
+            <p>Conteúdo organizado para o visitante entender rápido o que você faz e como falar com você.</p>
+          </article>
+          <article class="result-card">
+            <strong>Operação</strong>
+            <p>Sistemas e telas internas pensados para reduzir retrabalho e deixar a rotina mais visual.</p>
+          </article>
+          <article class="result-card">
+            <strong>Evolução</strong>
+            <p>Estrutura preparada para receber novas páginas, telas, funcionalidades e melhorias futuras.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="proof-band" aria-label="Projetos e entregas KavCode">
         <div>
           <strong>2</strong>
@@ -183,7 +232,15 @@
         <div class="portfolio-grid">
           <article class="project-card project-case" data-category="sistemas">
             <div class="project-preview project-screenshot">
-              <img src="assets/portfolio/quintal/login.png" alt="Tela de login do sistema Quintal do Zé" />
+              <button
+                class="screenshot-button"
+                type="button"
+                data-modal-image="assets/portfolio/quintal/login.png"
+                data-modal-title="Quintal do Zé | Tela de login"
+                aria-label="Ampliar tela de login do sistema Quintal do Zé"
+              >
+                <img src="assets/portfolio/quintal/login.png" alt="Tela de login do sistema Quintal do Zé" />
+              </button>
             </div>
             <div class="project-body">
               <p>Sistema de pedidos</p>
@@ -232,7 +289,15 @@
           </article>
           <article class="project-card project-case" data-category="sistemas">
             <div class="project-preview project-screenshot">
-              <img src="assets/portfolio/estoque/dashboard.png" alt="Dashboard do sistema Gestão de Estoque" />
+              <button
+                class="screenshot-button"
+                type="button"
+                data-modal-image="assets/portfolio/estoque/dashboard.png"
+                data-modal-title="Gestão de Estoque | Dashboard"
+                aria-label="Ampliar dashboard do sistema Gestão de Estoque"
+              >
+                <img src="assets/portfolio/estoque/dashboard.png" alt="Dashboard do sistema Gestão de Estoque" />
+              </button>
             </div>
             <div class="project-body">
               <p>Sistema web</p>
@@ -319,16 +384,13 @@
         <div class="support-layout">
           <div class="support-card support-fast-track">
             <span>Atendimento direto</span>
-            <h3>Me conte o que você quer criar.</h3>
-            <p>Você pode mandar uma ideia solta, prints de referência ou explicar o problema do negócio em poucas linhas.</p>
-            <a
-              class="support-button"
-              href="https://wa.me/5547991457978?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20KavCode%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20um%20projeto."
-              target="_blank"
-              rel="noopener"
-            >
-              Chamar no WhatsApp
-            </a>
+            <h3>Escolha por onde quer começar.</h3>
+            <p>Os atalhos abaixo já abrem o WhatsApp com uma mensagem pronta para facilitar o primeiro contato.</p>
+            <div class="support-options" aria-label="Atalhos de atendimento KavCode">
+              <a href="https://wa.me/5547991457978?text=Ol%C3%A1%2C%20quero%20criar%20um%20site%20institucional%20com%20a%20KavCode." target="_blank" rel="noopener">Quero um site</a>
+              <a href="https://wa.me/5547991457978?text=Ol%C3%A1%2C%20quero%20criar%20um%20sistema%20sob%20medida%20com%20a%20KavCode." target="_blank" rel="noopener">Quero um sistema</a>
+              <a href="https://wa.me/5547991457978?text=Ol%C3%A1%2C%20tenho%20uma%20ideia%20e%20queria%20entender%20o%20melhor%20caminho%20com%20a%20KavCode." target="_blank" rel="noopener">Tenho uma ideia</a>
+            </div>
           </div>
           <div class="support-faq" aria-label="Perguntas frequentes da KavCode">
             <article class="faq-item active">
@@ -407,14 +469,47 @@
       </section>
     </main>
 
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/5547991457978?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20KavCode%20e%20quero%20falar%20sobre%20um%20projeto."
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar com a KavCode pelo WhatsApp"
+    >
+      WhatsApp
+    </a>
+
+    <div class="screenshot-modal" aria-hidden="true" role="dialog" aria-label="Visualização ampliada do projeto">
+      <button class="modal-backdrop" type="button" data-modal-close aria-label="Fechar imagem ampliada"></button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong data-modal-title>Projeto KavCode</strong>
+          <button type="button" data-modal-close aria-label="Fechar imagem ampliada">Fechar</button>
+        </div>
+        <img src="" alt="" data-modal-img />
+      </div>
+    </div>
+
     <footer class="site-footer">
-      <a class="brand" href="#inicio" aria-label="KavCode">
-        <img src="assets/kavcode-logo.png" alt="" />
-        <span>KavCode</span>
-      </a>
-      <p>Sites institucionais, portfólios e sistemas sob medida.</p>
+      <div class="footer-branding">
+        <a class="brand" href="#inicio" aria-label="KavCode">
+          <img src="assets/kavcode-logo.png" alt="" />
+          <span>KavCode</span>
+        </a>
+        <p>Sites institucionais, portfólios e sistemas sob medida para negócios que querem presença digital e operação organizada.</p>
+      </div>
+      <div class="footer-links" aria-label="Links rápidos">
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#sac">SAC</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer-contact">
+        <a href="https://wa.me/5547991457978" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=eduardopellissari@gmail.com" target="_blank" rel="noopener">eduardopellissari@gmail.com</a>
+      </div>
     </footer>
 
-    <script src="script.js?v=23"></script>
+    <script src="script.js?v=24"></script>
   </body>
 </html>
