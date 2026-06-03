@@ -4,8 +4,13 @@ const filterButtons = document.querySelectorAll("[data-filter]");
 const projectCards = document.querySelectorAll("[data-category]");
 const previewButtons = document.querySelectorAll("[data-preview]");
 const faqItems = document.querySelectorAll(".faq-item");
+const screenshotButtons = document.querySelectorAll("[data-modal-image]");
+const screenshotModal = document.querySelector(".screenshot-modal");
+const modalImage = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalCloseButtons = document.querySelectorAll("[data-modal-close]");
 const revealItems = document.querySelectorAll(
-  ".trust-band div, .proof-band div, .section-heading, .service-card, .audience-grid article, .project-card, .process-list article, .support-card, .faq-item, .contact-section > div, .contact-panel, .site-footer"
+  ".trust-band div, .proof-band div, .section-heading, .about-panel, .result-card, .service-card, .audience-grid article, .project-card, .process-list article, .support-card, .faq-item, .contact-section > div, .contact-panel, .site-footer"
 );
 
 const updateHeader = () => {
@@ -20,7 +25,7 @@ menuButton.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", String(isOpen));
 });
 
-document.querySelectorAll(".nav-links a").forEach((link) => {
+document.querySelectorAll(".nav-links a, .header-actions a").forEach((link) => {
   link.addEventListener("click", () => {
     header.classList.remove("menu-open");
     menuButton.setAttribute("aria-expanded", "false");
@@ -43,7 +48,9 @@ filterButtons.forEach((button) => {
 previewButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const card = button.closest(".project-card");
+    const previewButton = card.querySelector(".screenshot-button");
     const previewImage = card.querySelector(".project-screenshot img");
+    const title = button.getAttribute("aria-label") || "Tela do projeto";
 
     card.querySelectorAll("[data-preview]").forEach((item) => item.classList.remove("active"));
     button.classList.add("active");
@@ -51,9 +58,53 @@ previewButtons.forEach((button) => {
 
     setTimeout(() => {
       previewImage.src = button.dataset.preview;
+      previewButton.dataset.modalImage = button.dataset.preview;
+      previewButton.dataset.modalTitle = title.replace("Ver ", "");
+      previewButton.setAttribute("aria-label", `Ampliar ${title.replace("Ver ", "")}`);
       previewImage.style.opacity = "1";
     }, 120);
   });
+});
+
+
+const openModal = (image, title) => {
+  if (!screenshotModal || !modalImage || !modalTitle) {
+    return;
+  }
+
+  modalImage.src = image;
+  modalImage.alt = title;
+  modalTitle.textContent = title;
+  screenshotModal.classList.add("active");
+  screenshotModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+};
+
+const closeModal = () => {
+  if (!screenshotModal || !modalImage) {
+    return;
+  }
+
+  screenshotModal.classList.remove("active");
+  screenshotModal.setAttribute("aria-hidden", "true");
+  modalImage.src = "";
+  document.body.classList.remove("modal-open");
+};
+
+screenshotButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    openModal(button.dataset.modalImage, button.dataset.modalTitle || "Projeto KavCode");
+  });
+});
+
+modalCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeModal);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeModal();
+  }
 });
 
 
