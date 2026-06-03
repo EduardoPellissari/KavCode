@@ -1046,9 +1046,51 @@ h3 {
   transition: opacity 850ms ease, transform 850ms ease;
 }
 
-.reveal.in-view {
+.section-heading.reveal,
+.contact-section > div:first-child.reveal {
+  transform: translateX(-44px);
+}
+
+.service-card:nth-child(even).reveal,
+.audience-grid article:nth-child(even).reveal,
+.process-list article:nth-child(even).reveal,
+.faq-item:nth-child(even).reveal,
+.contact-panel.reveal {
+  transform: translateX(44px);
+}
+
+.trust-band div.reveal,
+.proof-band div.reveal,
+.project-card.reveal,
+.support-card.reveal {
+  transform: scale(0.96);
+}
+
+.service-card:nth-child(odd).reveal,
+.audience-grid article:nth-child(odd).reveal,
+.process-list article:nth-child(odd).reveal,
+.faq-item:nth-child(odd).reveal {
+  transform: translateY(34px);
+}
+
+.reveal.in-view,
+.section-heading.reveal.in-view,
+.contact-section > div:first-child.reveal.in-view,
+.service-card:nth-child(even).reveal.in-view,
+.audience-grid article:nth-child(even).reveal.in-view,
+.process-list article:nth-child(even).reveal.in-view,
+.faq-item:nth-child(even).reveal.in-view,
+.contact-panel.reveal.in-view,
+.trust-band div.reveal.in-view,
+.proof-band div.reveal.in-view,
+.project-card.reveal.in-view,
+.support-card.reveal.in-view,
+.service-card:nth-child(odd).reveal.in-view,
+.audience-grid article:nth-child(odd).reveal.in-view,
+.process-list article:nth-child(odd).reveal.in-view,
+.faq-item:nth-child(odd).reveal.in-view {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0) scale(1);
 }
 
 .reveal:nth-child(2) {
@@ -1061,6 +1103,15 @@ h3 {
 
 .reveal:nth-child(4) {
   transition-delay: 200ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.in-view {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @keyframes slideFadeUp {
