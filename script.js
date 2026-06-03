@@ -5,7 +5,7 @@ const projectCards = document.querySelectorAll("[data-category]");
 const previewButtons = document.querySelectorAll("[data-preview]");
 const contactForm = document.querySelector(".contact-form");
 const revealItems = document.querySelectorAll(
-  ".trust-band div, .section-heading, .service-card, .project-card, .process-list article, .contact-section > div, .contact-form, .site-footer"
+  ".trust-band div, .proof-band div, .section-heading, .service-card, .audience-grid article, .project-card, .process-list article, .contact-section > div, .contact-form, .site-footer"
 );
 
 const updateHeader = () => {
