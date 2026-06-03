@@ -60,7 +60,6 @@ contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(contactForm);
   const nome = formData.get("nome").trim();
-  const contato = formData.get("contato").trim();
   const projeto = formData.get("projeto").trim();
   const button = contactForm.querySelector("button");
 
@@ -68,7 +67,6 @@ contactForm.addEventListener("submit", (event) => {
     "Olá, vim pelo site da KavCode e quero iniciar um projeto.",
     "",
     `Nome: ${nome}`,
-    `Contato: ${contato}`,
     `Projeto: ${projeto}`,
   ].join("\n");
 
