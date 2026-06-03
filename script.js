@@ -3,10 +3,9 @@ const menuButton = document.querySelector("[data-menu-button]");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const projectCards = document.querySelectorAll("[data-category]");
 const previewButtons = document.querySelectorAll("[data-preview]");
-const contactForm = document.querySelector(".contact-form");
 const faqItems = document.querySelectorAll(".faq-item");
 const revealItems = document.querySelectorAll(
-  ".trust-band div, .proof-band div, .section-heading, .service-card, .audience-grid article, .project-card, .process-list article, .support-card, .faq-item, .contact-section > div, .contact-form, .site-footer"
+  ".trust-band div, .proof-band div, .section-heading, .service-card, .audience-grid article, .project-card, .process-list article, .support-card, .faq-item, .contact-section > div, .contact-panel, .site-footer"
 );
 
 const updateHeader = () => {
@@ -74,25 +73,6 @@ faqItems.forEach((item) => {
       button.setAttribute("aria-expanded", "true");
     }
   });
-});
-
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const formData = new FormData(contactForm);
-  const nome = formData.get("nome").trim();
-  const projeto = formData.get("projeto").trim();
-  const button = contactForm.querySelector("button");
-
-  const message = [
-    "Olá, vim pelo site da KavCode e quero iniciar um projeto.",
-    "",
-    `Nome: ${nome}`,
-    `Projeto: ${projeto}`,
-  ].join("\n");
-
-  const whatsappUrl = `https://wa.me/5547991457978?text=${encodeURIComponent(message)}`;
-  button.textContent = "Abrindo WhatsApp";
-  window.location.href = whatsappUrl;
 });
 
 if ("IntersectionObserver" in window) {
