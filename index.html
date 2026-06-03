@@ -8,7 +8,7 @@
       content="KavCode cria sites institucionais, portfólios profissionais e sistemas sob medida com estratégia, código limpo e design responsivo."
     />
     <title>KavCode | Desenvolvimento web e sistemas sob medida</title>
-    <link rel="stylesheet" href="styles.css?v=10" />
+    <link rel="stylesheet" href="styles.css?v=12" />
   </head>
   <body>
     <header class="site-header" data-header>
@@ -236,19 +236,37 @@
             Conte o que você quer vender, apresentar ou organizar. A KavCode transforma
             a ideia em uma presença digital objetiva e bem acabada.
           </p>
+          <div class="contact-actions" aria-label="Canais de contato direto">
+            <a
+              class="contact-link whatsapp-link"
+              href="https://wa.me/5547991457978?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20KavCode%20e%20quero%20falar%20sobre%20um%20projeto."
+              target="_blank"
+              rel="noopener"
+            >
+              WhatsApp
+            </a>
+            <a
+              class="contact-link email-link"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=eduardopellissari@gmail.com&su=Projeto%20pelo%20site%20KavCode&body=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20KavCode%20e%20quero%20falar%20sobre%20um%20projeto."
+              target="_blank"
+              rel="noopener"
+            >
+              E-mail
+            </a>
+          </div>
         </div>
         <form class="contact-form">
           <label>
             Nome
-            <input type="text" name="nome" placeholder="Seu nome" />
+            <input type="text" name="nome" placeholder="Seu nome" required />
           </label>
           <label>
             WhatsApp ou e-mail
-            <input type="text" name="contato" placeholder="Como podemos falar com você?" />
+            <input type="text" name="contato" placeholder="Como podemos falar com você?" required />
           </label>
           <label>
             Projeto
-            <textarea name="projeto" rows="4" placeholder="Me conte o que precisa"></textarea>
+            <textarea name="projeto" rows="4" placeholder="Me conte o que precisa" required></textarea>
           </label>
           <button class="primary-button" type="submit">Enviar briefing</button>
         </form>
@@ -263,6 +281,6 @@
       <p>Sites institucionais, portfólios e sistemas sob medida.</p>
     </footer>
 
-    <script src="script.js?v=10"></script>
+    <script src="script.js?v=12"></script>
   </body>
 </html>
